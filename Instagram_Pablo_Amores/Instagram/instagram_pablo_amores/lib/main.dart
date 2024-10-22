@@ -75,7 +75,7 @@ class _MiInstagramState extends State<MiInstagram> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 4),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -87,7 +87,7 @@ class _MiInstagramState extends State<MiInstagram> {
                   color: Colors.black,
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 2),
               Text(
                 "\"Nunca sabes lo que te depara el futuro\".",
                 style: TextStyle(
@@ -95,7 +95,7 @@ class _MiInstagramState extends State<MiInstagram> {
                   color: Colors.black,
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 2),
               Text(
                 "faqsandroid.com",
                 style: TextStyle(
@@ -105,7 +105,7 @@ class _MiInstagramState extends State<MiInstagram> {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 4),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             child: OutlinedButton(
@@ -127,7 +127,7 @@ class _MiInstagramState extends State<MiInstagram> {
               ),
             ),
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 4),
           SizedBox(
             height: 100,
             child: ListView(

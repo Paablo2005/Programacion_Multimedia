@@ -52,7 +52,6 @@ class _MiInstagramState extends State<MiInstagram> {
       ),
       body: Column(
         children: [
-          // Header con imagen y estadísticas
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(
@@ -77,11 +76,8 @@ class _MiInstagramState extends State<MiInstagram> {
             ),
           ),
           const SizedBox(height: 10),
-
-          // Información del perfil completamente pegada al margen izquierdo
           const Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start, // Alineado a la izquierda
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Fernando Álvarez del Vayo",
@@ -109,37 +105,29 @@ class _MiInstagramState extends State<MiInstagram> {
               ),
             ],
           ),
-
           const SizedBox(height: 10),
-
           SizedBox(
-            width: MediaQuery.of(context).size.width *
-                0.9, // 90% del ancho disponible
+            width: MediaQuery.of(context).size.width * 0.9,
             child: OutlinedButton(
-              onPressed: () {
-                // Añadir funcionalidad si es necesario
-              },
+              onPressed: () {},
               style: OutlinedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20), // Bordes redondeados
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 side: BorderSide(
-                  color: Colors.grey.shade400, // Color del borde
-                  width: 1, // Ancho del borde
+                  color: Colors.grey.shade400,
+                  width: 1,
                 ),
               ),
               child: const Text(
                 "Editar perfil",
                 style: TextStyle(
-                  color: Colors.black, // Color del texto
+                  color: Colors.black,
                 ),
               ),
             ),
           ),
-
           const SizedBox(height: 15),
-
-          // Historias destacadas
           SizedBox(
             height: 100,
             child: ListView(
@@ -153,8 +141,6 @@ class _MiInstagramState extends State<MiInstagram> {
               ],
             ),
           ),
-
-          // Grid de publicaciones
           Expanded(
             child: GridView.builder(
               padding: const EdgeInsets.all(5),
@@ -163,9 +149,8 @@ class _MiInstagramState extends State<MiInstagram> {
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 5,
               ),
-              itemCount: 9, // Cambiar según las publicaciones disponibles
+              itemCount: 9,
               itemBuilder: (context, index) {
-                // Lista de rutas de imágenes para las publicaciones
                 final List<String> publicaciones = [
                   'assets/images/post1.jpg',
                   'assets/images/post2.jpg',
@@ -182,8 +167,7 @@ class _MiInstagramState extends State<MiInstagram> {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(publicaciones[index]),
-                      fit: BoxFit
-                          .cover, // Hace que la imagen cubra completamente el contenedor
+                      fit: BoxFit.cover,
                     ),
                   ),
                 );
@@ -193,9 +177,8 @@ class _MiInstagramState extends State<MiInstagram> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType
-            .fixed, // Asegura que los íconos estén distribuidos uniformemente
-        currentIndex: 2, // El índice del ícono central (box_outlined)
+        type: BottomNavigationBarType.fixed,
+        currentIndex: 2,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -206,8 +189,7 @@ class _MiInstagramState extends State<MiInstagram> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-                Icons.add_box_outlined), // Este es el ícono que estará centrado
+            icon: Icon(Icons.add_box_outlined),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -245,8 +227,8 @@ class _MiInstagramState extends State<MiInstagram> {
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundImage: AssetImage(imagePath), // Imagen personalizada
-            backgroundColor: Colors.grey[300], // Color de fondo de respaldo
+            backgroundImage: AssetImage(imagePath),
+            backgroundColor: Colors.grey[300],
           ),
           const SizedBox(height: 5),
           Text(

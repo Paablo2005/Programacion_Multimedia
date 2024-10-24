@@ -75,7 +75,6 @@ class _MiInstagramState extends State<MiInstagram> {
               ],
             ),
           ),
-          const SizedBox(height: 4),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -141,6 +140,16 @@ class _MiInstagramState extends State<MiInstagram> {
               ],
             ),
           ),
+          const SizedBox(height: 4),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.photo, size: 30),
+              SizedBox(width: 150),
+              Icon(Icons.video_library, size: 30),
+            ],
+          ),
+          const SizedBox(height: 4),
           Expanded(
             child: GridView.builder(
               padding: const EdgeInsets.all(5),

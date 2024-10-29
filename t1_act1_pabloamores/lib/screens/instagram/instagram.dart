@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'mi_instagram.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Instagram extends StatelessWidget {
+  const Instagram({super.key});
 
   @override
   Widget build(BuildContext context) {

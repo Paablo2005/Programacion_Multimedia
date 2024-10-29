@@ -7,6 +7,7 @@ import 'package:t1_act1_pabloamores/screens/icons_screen.dart';
 import 'package:t1_act1_pabloamores/screens/header_screen.dart';
 import 'package:t1_act1_pabloamores/screens/nested_rows_and_columns_screen.dart';
 import 'package:t1_act1_pabloamores/screens/clicks_count.dart';
+import 'package:t1_act1_pabloamores/screens/instagram/instagram.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -92,6 +93,15 @@ class MyDrawer extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            title: const Text('Pantalla 8: Instagram'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Instagram()),
+              );
+            },
+          )
         ],
       ),
     );

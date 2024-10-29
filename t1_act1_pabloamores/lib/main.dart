@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -29,7 +30,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Drawer Navigation App'),
       ),
-      drawer: const MyDrawer(), // Usa el widget MyDrawer
+      drawer: const MyDrawer(),
       body: const Center(child: Text('Selecciona una opción en el Drawer')),
     );
   }

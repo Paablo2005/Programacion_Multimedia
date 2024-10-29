@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_pablo_amores/widgets/stat_column.dart';
-import 'package:instagram_pablo_amores/widgets/story_circle.dart';
+import 'package:t1_act1_pabloamores/screens/instagram/widgets/stat_column.dart';
+import 'package:t1_act1_pabloamores/screens/instagram/widgets/story_circle.dart';
 
 class MiInstagram extends StatefulWidget {
   const MiInstagram({super.key});

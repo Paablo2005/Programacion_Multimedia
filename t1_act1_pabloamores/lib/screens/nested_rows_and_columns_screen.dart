@@ -13,7 +13,6 @@ class NestedRowsAndColumnsScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Primera fila con un solo elemento centrado
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -27,7 +26,6 @@ class NestedRowsAndColumnsScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          // Segunda fila con dos elementos
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -49,7 +47,6 @@ class NestedRowsAndColumnsScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          // Tercera fila con tres elementos
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

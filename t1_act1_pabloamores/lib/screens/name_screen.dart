@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class NameScreen extends StatelessWidget {
   const NameScreen({super.key});
@@ -10,6 +9,7 @@ class NameScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Nombre y Repositorio'),
       ),
+      drawer: const MyDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

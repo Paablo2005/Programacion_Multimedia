@@ -1,13 +1,4 @@
-// drawer.dart
-import 'package:flutter/material.dart';
-import 'package:t1_act1_pabloamores/screens/name_screen.dart';
-import 'package:t1_act1_pabloamores/screens/row_photos_screen.dart';
-import 'package:t1_act1_pabloamores/screens/column_photos_screen.dart';
-import 'package:t1_act1_pabloamores/screens/icons_screen.dart';
-import 'package:t1_act1_pabloamores/screens/header_screen.dart';
-import 'package:t1_act1_pabloamores/screens/nested_rows_and_columns_screen.dart';
-import 'package:t1_act1_pabloamores/screens/clicks_count.dart';
-import 'package:t1_act1_pabloamores/screens/instagram/instagram.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -30,76 +21,56 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             title: const Text('Pantalla 1: Nombre y Repositorio'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const NameScreen()),
-              );
+              Navigator.pushNamed(context, '/screens/name_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 2: Fotos en Fila'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const RowPhotosScreen()),
-              );
+              Navigator.pushNamed(context, '/screens/row_photos_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 3: Fotos en Columna'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ColumnPhotosScreen()),
-              );
+              Navigator.pushNamed(context, '/screens/column_photos_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 4: Íconos'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const IconsScreen()),
-              );
+              Navigator.pushNamed(context, '/screens/icons_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 5: Header'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const HeaderScreen()),
-              );
+              Navigator.pushNamed(context, '/screens/header_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 6: Filas y columnas anidadas'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const NestedRowsAndColumnsScreen()),
-              );
+              Navigator.pushNamed(
+                  context, '/screens/nested_rows_and_columns_screen');
             },
           ),
           ListTile(
             title: const Text('Pantalla 7: Contador de clics'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MiContador()),
-              );
+              Navigator.pushNamed(context, '/screens/clicks_count');
             },
           ),
           ListTile(
             title: const Text('Pantalla 8: Instagram'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Instagram()),
-              );
+              Navigator.pushNamed(context, '/screens/instagram/mi_instagram');
+            },
+          ),
+          ListTile(
+            title: const Text('Pantalla 9: Imagenes Game'),
+            onTap: () {
+              Navigator.pushNamed(context, '/screens/random_photos');
             },
           )
         ],

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class HeaderScreen extends StatelessWidget {
   const HeaderScreen({super.key});
@@ -9,6 +9,7 @@ class HeaderScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Header Screen'),
       ),
+      drawer: const MyDrawer(),
       body: Container(
         height: 130,
         width: double.infinity,

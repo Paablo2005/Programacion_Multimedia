@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class IconsScreen extends StatelessWidget {
   const IconsScreen({super.key});
@@ -9,6 +9,7 @@ class IconsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Íconos'),
       ),
+      drawer: const MyDrawer(),
       body: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

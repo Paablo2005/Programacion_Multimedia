@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class StatColumn extends StatelessWidget {
   final String number;

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class MiContador extends StatefulWidget {
   const MiContador({super.key});
@@ -35,6 +35,7 @@ class _MiContadorState extends State<MiContador> {
       appBar: AppBar(
         title: const Text('Contador de Clics'),
       ),
+      drawer: const MyDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

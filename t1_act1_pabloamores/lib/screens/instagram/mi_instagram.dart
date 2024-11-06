@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:t1_act1_pabloamores/screens/instagram/widgets/stat_column.dart';
-import 'package:t1_act1_pabloamores/screens/instagram/widgets/story_circle.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class MiInstagram extends StatefulWidget {
   const MiInstagram({super.key});
@@ -15,6 +13,7 @@ class _MiInstagramState extends State<MiInstagram> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
+      drawer: const MyDrawer(),
       body: _buildBody(context),
       bottomNavigationBar: _buildBottomNavigationBar(),
     );
@@ -23,7 +22,7 @@ class _MiInstagramState extends State<MiInstagram> {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      elevation: 0,
+      elevation: 4,
       title: const Row(
         children: [
           Text(
@@ -40,8 +39,10 @@ class _MiInstagramState extends State<MiInstagram> {
       actions: [
         IconButton(
           icon: const Icon(Icons.menu, color: Colors.black),
-          onPressed: () {},
-        )
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
+          },
+        ),
       ],
     );
   }
@@ -147,6 +148,7 @@ class _MiInstagramState extends State<MiInstagram> {
           StoryCircle("Prada y Bu...", 'assets/images/story3.jpg'),
           StoryCircle("Arquitectura", 'assets/images/story4.jpg'),
           StoryCircle("Retratos", 'assets/images/story5.jpg'),
+          StoryCircle("Paisajes", 'assets/images/story5.jpg')
         ],
       ),
     );

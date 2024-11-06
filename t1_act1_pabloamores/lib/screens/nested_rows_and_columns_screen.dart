@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class NestedRowsAndColumnsScreen extends StatelessWidget {
   const NestedRowsAndColumnsScreen({super.key});
@@ -9,6 +9,7 @@ class NestedRowsAndColumnsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Ejemplo de filas y columnas anidadas'),
       ),
+      drawer: const MyDrawer(),
       body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

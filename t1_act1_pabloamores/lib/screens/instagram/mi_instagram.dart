@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:t1_act1_pabloamores/screens/screens.dart';
 
 class MiInstagram extends StatefulWidget {
@@ -7,7 +8,22 @@ class MiInstagram extends StatefulWidget {
   State<MiInstagram> createState() => _MiInstagramState();
 }
 
-class _MiInstagramState extends State<MiInstagram> {
+class _MiInstagramState extends State<MiInstagram>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,9 +122,9 @@ class _MiInstagramState extends State<MiInstagram> {
         const SizedBox(height: 4),
         _buildStories(),
         const SizedBox(height: 4),
-        _buildIconRow(),
+        _buildTabBar(),
         const SizedBox(height: 4),
-        _buildGrid(),
+        _buildTabBarView(),
       ],
     );
   }
@@ -154,50 +170,67 @@ class _MiInstagramState extends State<MiInstagram> {
     );
   }
 
-  Widget _buildIconRow() {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(Icons.photo, size: 30),
-        SizedBox(width: 150),
-        Icon(Icons.video_library, size: 30),
+  Widget _buildTabBar() {
+    return TabBar(
+      controller: _tabController,
+      tabs: const [
+        Tab(icon: Icon(Icons.photo, size: 30)),
+        Tab(icon: Icon(Icons.video_library, size: 30)),
       ],
     );
   }
 
-  Widget _buildGrid() {
+  Widget _buildTabBarView() {
     return Expanded(
-      child: GridView.builder(
-        padding: const EdgeInsets.all(5),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 5,
-          mainAxisSpacing: 5,
-        ),
-        itemCount: 9,
-        itemBuilder: (context, index) {
-          final List<String> publicaciones = [
-            'assets/images/post1.jpg',
-            'assets/images/post2.jpg',
-            'assets/images/post3.jpg',
-            'assets/images/post4.jpg',
-            'assets/images/post5.jpg',
-            'assets/images/post6.jpg',
-            'assets/images/post7.jpg',
-            'assets/images/post8.jpg',
-            'assets/images/post9.jpg',
-          ];
-
-          return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(publicaciones[index]),
-                fit: BoxFit.cover,
-              ),
-            ),
-          );
-        },
+      child: TabBarView(
+        controller: _tabController,
+        children: [
+          _buildGrid(),
+          _buildPublication(),
+        ],
       ),
+    );
+  }
+
+  Widget _buildGrid() {
+    return GridView.builder(
+      padding: const EdgeInsets.all(5),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        crossAxisSpacing: 5,
+        mainAxisSpacing: 5,
+      ),
+      itemCount: 9,
+      itemBuilder: (context, index) {
+        final List<String> publicaciones = [
+          'assets/images/post1.jpg',
+          'assets/images/post2.jpg',
+          'assets/images/post3.jpg',
+          'assets/images/post4.jpg',
+          'assets/images/post5.jpg',
+          'assets/images/post6.jpg',
+          'assets/images/post7.jpg',
+          'assets/images/post8.jpg',
+          'assets/images/post9.jpg',
+        ];
+
+        return Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(publicaciones[index]),
+              fit: BoxFit.cover,
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildPublication() {
+    return Container(
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/homer.gif'), fit: BoxFit.cover)),
     );
   }
 

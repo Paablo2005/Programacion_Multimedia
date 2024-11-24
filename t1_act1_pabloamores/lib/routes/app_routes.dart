@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
 import '../screens/screens.dart';
 
 class AppRoutes {
-  // Definir nombres para las rutas
   static const String clicksCount = '/clicks_count';
   static const String columnPhotos = '/column_photos';
   static const String rowPhotos = '/row_photos';
@@ -16,8 +16,8 @@ class AppRoutes {
   static const String instagram = '/instagram';
   static const String statColumn = '/stat_column';
   static const String storyCircle = '/story_circle';
+  static const String gameInstructions = '/game_instructions';
 
-  // Mapa de rutas
   static final Map<String, WidgetBuilder> routes = {
     clicksCount: (context) => const MiContador(),
     columnPhotos: (context) => const ColumnPhotosScreen(),
@@ -31,5 +31,6 @@ class AppRoutes {
     randomPhotos: (context) => const RandomPhotosScreen(),
     miInstagram: (context) => const MiInstagram(),
     instagram: (context) => const Instagram(),
+    gameInstructions: (context) => const GameInstructions(),
   };
 }

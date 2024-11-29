@@ -84,6 +84,12 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushNamed(context, AppRoutes.gameInstructions);
             },
           ),
+          ListTile(
+            title: const Text('Pantalla 10: Siete y media'),
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.sieteYMedia);
+            },
+          ),
         ],
       ),
     );

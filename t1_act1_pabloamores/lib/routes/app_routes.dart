@@ -17,6 +17,7 @@ class AppRoutes {
   static const String statColumn = '/stat_column';
   static const String storyCircle = '/story_circle';
   static const String gameInstructions = '/game_instructions';
+  static const String sieteYMedia = '/siete_y_media';
 
   static final Map<String, WidgetBuilder> routes = {
     clicksCount: (context) => const MiContador(),
@@ -32,5 +33,6 @@ class AppRoutes {
     miInstagram: (context) => const MiInstagram(),
     instagram: (context) => const Instagram(),
     gameInstructions: (context) => const GameInstructions(),
+    sieteYMedia: (context) => const SieteYMediaScreen(),
   };
 }

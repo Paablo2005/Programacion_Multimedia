@@ -18,6 +18,7 @@ class AppRoutes {
   static const String storyCircle = '/story_circle';
   static const String gameInstructions = '/game_instructions';
   static const String sieteYMedia = '/siete_y_media';
+  static const String formulariosNoDual = '/formularios_no_duales';
 
   static final Map<String, WidgetBuilder> routes = {
     clicksCount: (context) => const MiContador(),
@@ -34,5 +35,6 @@ class AppRoutes {
     instagram: (context) => const Instagram(),
     gameInstructions: (context) => const GameInstructions(),
     sieteYMedia: (context) => const SieteYMediaScreen(),
+    formulariosNoDual: (context) => const FormulariosNoDual(),
   };
 }

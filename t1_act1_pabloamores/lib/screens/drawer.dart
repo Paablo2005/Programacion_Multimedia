@@ -90,6 +90,12 @@ class MyDrawer extends StatelessWidget {
               Navigator.pushNamed(context, AppRoutes.sieteYMedia);
             },
           ),
+          ListTile(
+            title: const Text('Pantalla 11: Formularios (No duales)'),
+            onTap: () {
+              Navigator.pushNamed(context, AppRoutes.formulariosNoDual);
+            },
+          ),
         ],
       ),
     );

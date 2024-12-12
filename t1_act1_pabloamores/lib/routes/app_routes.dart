@@ -19,6 +19,7 @@ class AppRoutes {
   static const String gameInstructions = '/game_instructions';
   static const String sieteYMedia = '/siete_y_media';
   static const String formulariosNoDual = '/formularios_no_duales';
+  static const String formulariosSwich = '/formulario_swich';
 
   static final Map<String, WidgetBuilder> routes = {
     clicksCount: (context) => const MiContador(),
@@ -36,5 +37,6 @@ class AppRoutes {
     gameInstructions: (context) => const GameInstructions(),
     sieteYMedia: (context) => const SieteYMediaScreen(),
     formulariosNoDual: (context) => const FormulariosNoDual(),
+    formulariosSwich: (context) => const FormularioConSwitch(),
   };
 }

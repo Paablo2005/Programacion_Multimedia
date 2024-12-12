@@ -10,6 +10,7 @@ class MiContador extends StatefulWidget {
   // Creación del estado asociado al widget MiContador
   // Se ignora la advertencia relacionada con el uso del prefijo de tipo privado para la clase de estado
   // Esto es una convención para mantener el código organizado
+  // ignore: library_private_types_in_public_api
   _MiContadorState createState() => _MiContadorState();
 }
 

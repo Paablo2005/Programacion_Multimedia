@@ -6,6 +6,7 @@ class SieteYMediaScreen extends StatefulWidget {
   const SieteYMediaScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SieteYMediaScreenState createState() => _SieteYMediaScreenState();
 }
 
@@ -50,8 +51,9 @@ class _SieteYMediaScreenState extends State<SieteYMediaScreen> {
 
   // Método para que el jugador saque una carta
   void sacarCartaJugador() {
-    if (sePlanto)
+    if (sePlanto) {
       return; // No permitir sacar cartas si el jugador se ha plantado
+    }
     final carta = cartas[Random().nextInt(cartas.length)];
     setState(() {
       cartasJugador.add(carta);
